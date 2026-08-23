@@ -1,148 +1,187 @@
+import { SectionSubtitle, SectionTitle } from "../ui/typography";
+
 export default function Products() {
   const products = [
     {
-      title: "POS Systems",
-      desc: "Advanced POS systems for retail, restaurants, and businesses.",
-      // Monitor + receipt SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-        </svg>
-      )
+      title: "Phone Holder Sakti",
+      category: "Other",
+      rating: "5.0",
+      reviews: "1.2k",
+      price: "$29.90",
+      image: "/products/phone_holder_1787421451039.jpg"
     },
     {
-      title: "Retail Software",
-      desc: "Powerful billing & inventory software for retail stores.",
-      // Shopping cart SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-        </svg>
-      )
+      title: "Headsound",
+      category: "Music",
+      rating: "5.0",
+      reviews: "1.2k",
+      price: "$12.00",
+      image: "/products/headsound_1787421464003.jpg"
     },
     {
-      title: "Restaurant POS",
-      desc: "Complete POS solution for restaurants, cafes, and food businesses.",
-      // Silverware / Restaurant SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-        </svg>
-      )
+      title: "Adudu Cleaner",
+      category: "Other",
+      rating: "4.4",
+      reviews: "1k",
+      price: "$29.90",
+      image: "/products/adudu_cleaner_1787421476041.jpg"
     },
     {
-      title: "Barcode Solutions",
-      desc: "Barcode printers, scanners & labels for efficient business operations.",
-      // Barcode SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-        </svg>
-      )
+      title: "CCTV Maling",
+      category: "Home",
+      rating: "4.8",
+      reviews: "120",
+      price: "$50.00",
+      image: "/products/cctv_maling_1787421489449.jpg"
     },
     {
-      title: "Accounting Software",
-      desc: "Smart accounting software to manage your finances.",
-      // Chart / Finance SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-      )
+      title: "Stuffus Peker 32",
+      category: "Other",
+      rating: "5.0",
+      reviews: "1.2k",
+      price: "$9.90",
+      image: "/products/stuffus_peker_1787421502300.jpg"
     },
     {
-      title: "Access Control",
-      desc: "Security solutions for access control & time attendance.",
-      // Lock / Shield SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-        </svg>
-      )
+      title: "Stuffus R175",
+      category: "Music",
+      rating: "4.8",
+      reviews: "2.4k",
+      price: "$34.10",
+      image: "/products/stuffus_r175_1787421523624.jpg"
     },
     {
-      title: "Clinic Management",
-      desc: "Manage appointments, patients & clinic operations easily.",
-      // Heart / Clinic SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-        </svg>
-      )
+      title: "Smart Speaker",
+      category: "Audio",
+      rating: "4.9",
+      reviews: "800",
+      price: "$45.00",
+      image: "/products/headsound_1787421464003.jpg"
     },
     {
-      title: "E-Commerce Solutions",
-      desc: "E-commerce website & app development solutions.",
-      // Bag / Store SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-        </svg>
-      )
+      title: "Desk Organizer",
+      category: "Office",
+      rating: "4.6",
+      reviews: "450",
+      price: "$15.50",
+      image: "/products/phone_holder_1787421451039.jpg"
     },
     {
-      title: "Web & App Development",
-      desc: "Custom website & mobile app development for your business.",
-      // Code / App SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-        </svg>
-      )
+      title: "Mini Camera",
+      category: "Home",
+      rating: "4.7",
+      reviews: "920",
+      price: "$38.00",
+      image: "/products/cctv_maling_1787421489449.jpg"
     },
     {
-      title: "IT Services",
-      desc: "End-to-end IT services & AMC support for your business.",
-      // Server / Tech SVG
-      icon: (
-        <svg className="w-16 h-16 text-[#004EEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-        </svg>
-      )
+      title: "Earbuds Pro",
+      category: "Music",
+      rating: "4.9",
+      reviews: "3.1k",
+      price: "$55.00",
+      image: "/products/stuffus_r175_1787421523624.jpg"
     }
   ];
 
   return (
-    <section id="products" className="w-full py-20 bg-[#F8FAFC]">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+    <section id="products" className="w-full pb-10 md:pb-20 bg-transparent">
 
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h3 className="text-[13px] font-bold text-[#004EEB] uppercase tracking-widest mb-3">
-            Our Products & Solutions
-          </h3>
-          <h2 className="text-4xl md:text-[2.75rem] font-extrabold text-black mb-5 tracking-tight">
-            Explore Our Products & Solutions
-          </h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Complete range of IT solutions to simplify your business operations.
-          </p>
+      {/* ══════════════════════════════════════
+          MOBILE ONLY  (hidden on md+)
+      ══════════════════════════════════════ */}
+      <div className="block md:hidden pt-2 pb-6">
+        {/* Mobile Header */}
+        <div className="flex items-center justify-between px-4 mb-5">
+          <h2 className="text-[18px] font-bold text-slate-900 font-geist">Best Sellers</h2>
+          <button className="flex items-center gap-1.5 text-[12px] font-medium text-[#3b82f6] font-geist hover:underline">
+            View All
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 flex flex-col items-center text-center border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(0,78,235,0.15)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-            >
-              {/* Image / Icon Placeholder */}
-              <div className="w-full h-32 mb-6 flex items-center justify-center bg-[#F8FAFC] rounded-xl group-hover:bg-[#EEF2FC] transition-colors">
-                {product.icon}
+        {/* Mobile Horizontal Scroll */}
+        <div className="relative w-full">
+          <div
+            className="flex overflow-x-auto gap-3 pb-2 snap-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            {/* Left spacer */}
+            <div style={{ minWidth: "16px", flexShrink: 0 }} />
+            {products.map((product, index) => (
+              <div key={index} className="flex flex-col flex-shrink-0 snap-start cursor-pointer group w-[130px]">
+                {/* Image Box */}
+                <div className="w-[130px] h-[130px] bg-[#F5F5F7] rounded-2xl mb-2.5 flex items-center justify-center overflow-hidden p-3">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                {/* Info */}
+                <span className="font-semibold font-geist text-slate-900 text-[11px] leading-tight line-clamp-1 mb-0.5 px-0.5 text-center">
+                  {product.title}
+                </span>
+                <span className="text-[#3b82f6] font-geist text-[11px] pt-1 font-medium text-center px-0.5">
+                  Shop Now
+                </span>
               </div>
-
-              {/* Content */}
-              <h4 className="text-[17px] font-extrabold text-black mb-3">
-                {product.title}
-              </h4>
-              <p className="text-[13px] text-slate-500 leading-relaxed font-medium">
-                {product.desc}
-              </p>
-            </div>
-          ))}
+            ))}
+            {/* Right spacer */}
+            <div style={{ minWidth: "16px", flexShrink: 0 }} />
+          </div>
         </div>
-
       </div>
+
+      {/* ══════════════════════════════════════
+          DESKTOP ONLY  (hidden on mobile)
+      ══════════════════════════════════════ */}
+      <div className="hidden md:block pt-0">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          {/* Desktop Section Header */}
+          <div className="flex justify-between items-end mb-6">
+            <div className="flex flex-col gap-1.5">
+              <SectionTitle>Best Sellers</SectionTitle>
+              <SectionSubtitle>
+                Discover our most popular and highly rated IT products.
+              </SectionSubtitle>
+            </div>
+            <div className="flex items-center gap-1.5 cursor-pointer hover:text-black transition-colors group mb-1">
+              <span className="text-gray-600 font-geist text-[13px] font-medium text-center">View All</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-1 transition-transform duration-300">
+                <path d="M3 12h18M14 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+
+          {/* Desktop Products Grid */}
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {products.map((product, index) => (
+              <div key={index} className="flex flex-col bg-transparent">
+                {/* Image Box */}
+                <div className="relative w-full aspect-square bg-[#F5F5F7] rounded-3xl mb-4 overflow-hidden group cursor-pointer flex items-center justify-center p-6">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-contain mix-blend-multiply rounded-xl group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                {/* Product Info */}
+                <div className="flex flex-col items-center mt-1">
+                  <h3 className="font-semibold font-geist text-black text-[13px] tracking-wider capitalize mb-1 text-center group-hover:text-slate-700 transition-colors">
+                    {product.title}
+                  </h3>
+                  <span className="text-[#3b82f6] font-geist text-[12px] font-medium text-center group-hover:text-black transition-colors">
+                    Shop Now
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }
