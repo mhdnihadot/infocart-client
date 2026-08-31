@@ -5,6 +5,7 @@ import ClientLogos from "@/components/home/ClientLogos";
 import Categories from "@/components/home/Categories";
 import Products from "@/components/home/Products";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import RelatedServices from "@/components/home/RelatedServices";
 import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
 import Footer from "@/components/layout/Footer";
@@ -25,6 +26,7 @@ export default function LandingPage() {
           <Categories />
           <Products />
           <WhyChooseUs />
+          <RelatedServices />
           <FAQ />
           <CTA />
         </div>

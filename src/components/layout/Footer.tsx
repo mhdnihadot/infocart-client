@@ -28,10 +28,17 @@ export default function Footer() {
           <div className="lg:col-span-2 flex flex-col">
             <h4 className="font-geist font-semibold text-white text-[15px] mb-5">Quick Links</h4>
             <ul className="flex flex-col gap-3">
-              {['Home', 'About Us', 'Products', 'Solutions', 'Services', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <Link href="#" className="text-[14px] text-slate-400 hover:text-white transition-colors font-medium">
-                    {link}
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About Us', href: '/about' },
+                { name: 'Services', href: '/services' },
+                { name: 'Blogs', href: '/blogs' },
+                { name: 'Products', href: '/#categories' },
+                { name: 'Contact Us', href: '/#contact' },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-[14px] text-slate-400 hover:text-white transition-colors font-medium">
+                    {link.name}
                   </Link>
                 </li>
               ))}

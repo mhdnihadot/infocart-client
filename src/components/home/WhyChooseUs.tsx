@@ -1,71 +1,181 @@
 import React from "react";
-import { SectionSubtitle, SectionTitle } from "../ui/typography";
 
 export default function WhyChooseUs() {
   const features = [
     {
-      title: "Industry Expertise",
-      description: "20+ years of experience in Qatar providing complete IT solutions and security systems.",
+      title: "Domain Expertise",
+      description:
+        "Our teams are trained in enterprise POS, barcode systems, and retail infrastructure. We understand how commercial workflows run day to day, which helps reduce errors and downtime.",
       icon: (
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-slate-800 mb-6">
-          <circle cx="12" cy="8" r="6" />
-          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="text-white shrink-0"
+        >
+          {/* Pixelated globe icon */}
+          <rect x="8" y="2" width="8" height="2" />
+          <rect x="4" y="4" width="4" height="2" />
+          <rect x="16" y="4" width="4" height="2" />
+          <rect x="2" y="6" width="2" height="4" />
+          <rect x="20" y="6" width="2" height="4" />
+          <rect x="2" y="14" width="2" height="4" />
+          <rect x="20" y="14" width="2" height="4" />
+          <rect x="4" y="18" width="4" height="2" />
+          <rect x="16" y="18" width="4" height="2" />
+          <rect x="8" y="20" width="8" height="2" />
+          {/* Center grid lines */}
+          <rect x="11" y="4" width="2" height="16" />
+          <rect x="4" y="11" width="16" height="2" />
+          <rect x="7" y="6" width="2" height="4" />
+          <rect x="15" y="6" width="2" height="4" />
+          <rect x="7" y="14" width="2" height="4" />
+          <rect x="15" y="14" width="2" height="4" />
         </svg>
-      )
+      ),
     },
     {
-      title: "Comprehensive Solutions",
-      description: "A wide range of integrated products to streamline operations and boost efficiency.",
+      title: "Workforce Excellence",
+      description:
+        "Experienced technical specialists and certified hardware engineers trained in retail standards, rapid on-site commissioning, and client-tailored support.",
       icon: (
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-slate-800 mb-6">
-          <polygon points="12 2 2 7 12 12 22 7 12 2" />
-          <polyline points="2 12 12 17 22 12" />
-          <polyline points="2 17 12 22 22 17" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="text-white shrink-0"
+        >
+          {/* Pixelated workforce / team icon */}
+          <rect x="8" y="2" width="4" height="4" />
+          <rect x="16" y="6" width="4" height="4" />
+          <rect x="6" y="8" width="8" height="2" />
+          <rect x="4" y="10" width="2" height="6" />
+          <rect x="14" y="12" width="6" height="2" />
+          <rect x="20" y="14" width="2" height="6" />
+          <rect x="4" y="16" width="8" height="2" />
+          <rect x="14" y="20" width="8" height="2" />
+          <rect x="6" y="18" width="2" height="4" />
+          <rect x="10" y="18" width="2" height="4" />
         </svg>
-      )
+      ),
     },
     {
-      title: "Customer-Centric",
-      description: "Dedicated support and personalized assistance to ensure your specific business needs are met.",
+      title: "AI-Enhanced Services",
+      description:
+        "Smart automation and cloud intelligence supported by human oversight to improve billing speed, inventory accuracy, and business cost benefits.",
       icon: (
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-slate-800 mb-6">
-          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="text-white shrink-0"
+        >
+          {/* Pixelated diamond / neural constellation icon */}
+          <rect x="18" y="2" width="2" height="2" />
+          <rect x="16" y="4" width="2" height="2" />
+          <rect x="20" y="4" width="2" height="2" />
+          <rect x="18" y="6" width="2" height="2" />
+          <rect x="6" y="10" width="4" height="2" />
+          <rect x="4" y="12" width="2" height="4" />
+          <rect x="10" y="12" width="2" height="4" />
+          <rect x="6" y="16" width="4" height="2" />
+          <rect x="14" y="14" width="2" height="2" />
+          <rect x="12" y="16" width="2" height="2" />
+          <rect x="16" y="16" width="2" height="2" />
+          <rect x="14" y="18" width="2" height="2" />
         </svg>
-      )
-    }
+      ),
+    },
+    {
+      title: "Scalability",
+      description:
+        "Our delivery model is built for scalability as transaction volumes and requirements change. Capacity and processes expand without disrupting operations.",
+      icon: (
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="text-white shrink-0"
+        >
+          {/* Pixelated sync / loop arrows icon */}
+          <rect x="6" y="4" width="10" height="2" />
+          <rect x="14" y="2" width="2" height="2" />
+          <rect x="18" y="4" width="2" height="6" />
+          <rect x="16" y="8" width="2" height="2" />
+          <rect x="8" y="18" width="10" height="2" />
+          <rect x="8" y="20" width="2" height="2" />
+          <rect x="4" y="14" width="2" height="6" />
+          <rect x="6" y="14" width="2" height="2" />
+        </svg>
+      ),
+    },
   ];
 
   return (
-    <section className="w-full pb-20 bg-transparent">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 flex flex-col items-center">
+    <section
+      id="about"
+      className="w-full bg-[#030712] text-white py-24 md:py-32 relative overflow-hidden"
+    >
+      {/* Dynamic Ambient Background Glows */}
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-900/30 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-900/30 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] h-[500px] bg-gradient-to-tr from-purple-950/15 via-transparent to-blue-950/20 blur-[100px] pointer-events-none" />
 
-        {/* Header */}
-        <div className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
-          <SectionTitle className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-medium text-black tracking-tight mb-3 md:mb-4 font-geist leading-[1.15] md:leading-[1.2]">
-            Why Choose Us?
-          </SectionTitle>
-          <p className="text-[14px] md:text-[15px]   text-gray-500  ">
-            We deliver exceptional IT solutions tailored to your unique requirements, backed by decades of expertise and a commitment to excellence.
-          </p>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-20 w-full px-2 md:px-0">
-          {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-start md:items-center text-left md:text-center group cursor-default">
-              <div className="mb-4 md:mb-5 text-[#3b82f6] transition-transform duration-300 group-hover:-translate-y-1">
-                {feature.icon}
-              </div>
-              <h3 className="text-[17px] font-semibold text-slate-900 mb-2 md:mb-3 font-geist">
-                {feature.title}
-              </h3>
-              <p className="text-[13px] md:text-[15px]   text-gray-500">
-                {feature.description}
-              </p>
+      <div className="max-w-[1280px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          {/* Left Column: Heading & Summary */}
+          <div className="lg:col-span-5 flex flex-col items-start text-left">
+            {/* Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.07] border border-white/10 backdrop-blur-md mb-8">
+              <span className="text-[12px] font-medium text-slate-300 tracking-wide font-geist">
+                Why Choose Us
+              </span>
             </div>
-          ))}
-        </div>
 
+            {/* Main Title */}
+            <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-white tracking-tight leading-[1.1] font-geist mb-6">
+              What Sets Us <br />
+              Apart
+            </h2>
+
+            {/* Description */}
+            <p className="text-[15px] sm:text-[16px] text-slate-400 font-normal leading-relaxed max-w-[420px] font-geist">
+              We bring together deep industry expertise and modern automation to
+              help Qatar & GCC businesses operate with greater speed, clarity, and confidence.
+            </p>
+          </div>
+
+          {/* Right Column: 2x2 Feature Grid */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-12">
+            {features.map((feature, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-start group"
+              >
+                {/* Icon Container */}
+                <div className="mb-5 transition-transform duration-300 group-hover:scale-105">
+                  {feature.icon}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-[20px] font-semibold text-white mb-3 font-geist tracking-tight">
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-[14px] text-slate-400 leading-relaxed font-geist font-normal">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
       </div>
     </section>
   );

@@ -1,103 +1,134 @@
 "use client";
 
 import React, { useState } from "react";
-import { SectionTitle } from "../ui/typography";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   const faqs = [
     {
-      question: "What types of IT solutions do you offer?",
-      answer: "We offer a comprehensive range of IT solutions including barcode printers, POS terminals, CCTV systems, networking equipment, and complete business automation setups."
+      question: "How much does it cost me for the web design & POS services of your company?",
+      answer:
+        "Our pricing depends on your specific business requirements, number of terminals, software integrations, and hardware selections. We offer tailored, cost-effective packages for startups, growing retail shops, and multi-branch enterprises. Contact us for a customized quote.",
     },
     {
-      question: "Do you provide installation and maintenance?",
-      answer: "Yes, our expert technicians provide full installation services and ongoing maintenance support for all the hardware and systems we supply."
+      question: "How do I get started with the website & IT solutions services?",
+      answer:
+        "Getting started is simple. You can reach out to us via our quote form, phone, or WhatsApp. Our solution architects will analyze your business workflow, recommend the optimal hardware and software setup, and schedule immediate on-site demonstration and deployment.",
     },
     {
-      question: "How can I request a quote for bulk orders?",
-      answer: "You can request a quote by contacting our sales team directly via email or phone. We offer special pricing for bulk enterprise orders."
+      question: "Do you make the website & POS systems mobile-friendly or responsive?",
+      answer:
+        "Yes, absolutely. All our web platforms, merchant dashboards, and mobile POS applications are 100% responsive and optimized for smartphones, tablets, handheld barcode terminals, and touch desktop POS systems.",
     },
     {
-      question: "What is your warranty policy?",
-      answer: "All our products come with a standard manufacturer's warranty. Extended warranty and premium support packages are also available upon request."
+      question: "Why should I choose your IT & POS hardware services?",
+      answer:
+        "With decades of specialized experience across Qatar & GCC, we provide genuine certified hardware (touch POS, barcode scanners, thermal receipt printers, cash drawers, CCTV), lifetime firmware support, rapid 2-4 hour replacement guarantees, and continuous technical maintenance.",
     },
     {
-      question: "Do you offer tailored solutions for small businesses?",
-      answer: "Absolutely. We understand that every business is unique, and we tailor our IT packages to perfectly fit the scale and budget of small and medium enterprises."
+      question: "Do you provide on-site installation and staff training in Qatar?",
+      answer:
+        "Yes. Our certified field engineers handle full on-site installation, structured cabling, network configuration, database integration, and comprehensive staff training so your team can start billing with zero downtime.",
+    },
+    {
+      question: "What warranty and after-sales support do you provide?",
+      answer:
+        "All hardware equipment comes with a standard manufacturer warranty of 1 to 3 years. We also provide annual maintenance contracts (AMC), remote support, and on-site emergency repairs.",
+    },
+    {
+      question: "Can your POS software integrate with accounting and ERP systems?",
+      answer:
+        "Yes, our solutions seamlessly synchronize with popular accounting platforms, ERP software, payment gateways, and inventory management backends.",
     },
     {
       question: "How fast is your technical support response time?",
-      answer: "We pride ourselves on our rapid response times. Our dedicated support team typically responds to critical issues within 2-4 hours during business days."
-    }
+      answer:
+        "Our dedicated local support team operates 24/7. Critical business incidents are responded to within 1-2 hours, with on-site technician dispatch whenever necessary.",
+    },
   ];
+
+  const visibleFaqs = showAll ? faqs : faqs.slice(0, 4);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="w-full pb-8 bg-transparent relative overflow-hidden">
-      <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10">
-
-        {/* Section Header */}
-        <div className="text-center mb-10 md:mb-16">
-          <p className="text-[11px] font-bold tracking-widest text-gray-500 uppercase mb-3 md:mb-4">FAQ</p>
-          <h2 className="text-[1.75rem] sm:text-[2.25rem] md:text-[2.75rem] font-medium text-black tracking-tight mb-4 font-geist leading-[1.15] md:leading-[1.2]">
-            Frequently Asked <br />
-            <span className="font-serif italic text-slate-700">Questions</span>
+    <section id="faq" className="w-full bg-white py-20 md:py-28 relative">
+      <div className="max-w-[1080px] mx-auto px-6 md:px-12">
+        {/* Section Title */}
+        <div className="mb-10 md:mb-14 text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-[44px] font-normal text-slate-900 tracking-tight font-geist">
+            FAQ
           </h2>
         </div>
 
-        {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {faqs.map((faq, index) => {
+        {/* Minimalist Accordion List */}
+        <div className="border-t border-slate-300">
+          {visibleFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
-                className="flex flex-col justify-center"
+                className="border-b border-slate-300 transition-colors"
               >
-                {/* Glassmorphism FAQ Card */}
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left group cursor-pointer relative p-5 sm:p-6 md:px-8 md:py-6 rounded-[28px] md:rounded-[32px] bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:bg-white/60 transition-all duration-300"
+                  className="w-full py-6 md:py-7 flex items-center justify-between text-left group cursor-pointer focus:outline-none"
+                  aria-expanded={isOpen}
                 >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="font-geist font-medium text-[14px] sm:text-[15px] md:text-[16px] text-slate-900 leading-tight">
-                      {faq.question}
-                    </h3>
+                  <span className="text-[16px] sm:text-[17px] md:text-[18px] font-medium text-slate-900 font-geist pr-8 group-hover:text-blue-600 transition-colors">
+                    {faq.question}
+                  </span>
 
-                    {/* Toggle Icon */}
-                    <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-md transition-transform duration-300">
-                      <svg
-                        width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                        className={`transition-transform duration-300 ${isOpen ? "rotate-45" : "rotate-0"}`}
-                      >
-                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                      </svg>
-                    </div>
-                  </div>
-
-                  {/* Expandable Answer */}
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[200px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}
-                  >
-                    <p className="text-[14px] md:text-[15px] text-gray-500">
-                      {faq.answer}
-                    </p>
-                  </div>
+                  {/* Plus / Minus Icon */}
+                  <span className="shrink-0 text-slate-700 text-2xl font-light leading-none transition-transform duration-300 select-none">
+                    <svg
+                      className={`w-5 h-5 transition-transform duration-300 ${
+                        isOpen ? "rotate-45 text-blue-600" : "rotate-0 text-slate-800"
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 4v16m8-8H4"
+                      />
+                    </svg>
+                  </span>
                 </button>
+
+                {/* Expandable Answer */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isOpen ? "max-h-96 pb-6 opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed font-geist font-normal max-w-3xl">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             );
           })}
         </div>
 
-
-
+        {/* Show More / Show Less Button */}
+        <div className="mt-12 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll(!showAll)}
+            className="px-8 py-2.5 border border-blue-600 text-blue-600 hover:bg-blue-50 text-[14px] font-medium rounded-xs transition-colors duration-200 font-geist"
+          >
+            {showAll ? "Show less" : "Show more"}
+          </button>
+        </div>
       </div>
     </section>
   );

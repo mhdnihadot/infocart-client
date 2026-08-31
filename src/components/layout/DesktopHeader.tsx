@@ -45,7 +45,7 @@ export default function DesktopHeader() {
           {/* Center: Navigation Menu */}
           <nav className="font-geist flex flex-1 justify-center space-x-5 xl:space-x-7 items-center px-4">
             <Link href="/" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">Home</Link>
-            <Link href="#about" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">About Us</Link>
+            <Link href="/about" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">About Us</Link>
             <div className="flex items-center gap-1.5 cursor-pointer text-[14px] font-semibold transition-colors group text-slate-300 hover:text-white">
               Products
               <svg className="w-3.5 h-3.5 transition-colors text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7"></path></svg>
@@ -54,9 +54,9 @@ export default function DesktopHeader() {
               Solutions
               <svg className="w-3.5 h-3.5 transition-colors text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7"></path></svg>
             </div>
-            <Link href="#services" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">Services</Link>
-            {/* <Link href="#blog" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">Blog</Link> */}
-            <Link href="#contact" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">Contact Us</Link>
+            <Link href="/services" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">Services</Link>
+            <Link href="/blogs" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">Blogs</Link>
+            <Link href="/contact" className="text-[14px] font-semibold transition-colors text-slate-300 hover:text-white">Contact Us</Link>
           </nav>
 
           {/* Right: Actions & Contact */}
